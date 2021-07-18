@@ -7,7 +7,7 @@
 		<link type="text/css" rel="stylesheet" href="main.css">
 		<style>
 			body {
-				background-color: #f0f0f0;
+				background-color: #ffffff;
 				color: #444;
 			}
 			a {
@@ -30,7 +30,7 @@
 
 			function init( ) {
 
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 1, 10000 );
 				camera.position.set( 0, - 400, 600 );
 
 				scene = new THREE.Scene();
@@ -39,7 +39,7 @@
 				const loader = new THREE.FontLoader();
 				loader.load( 'fonts/helvetiker_regular.typeface.json', function ( font ) {
 
-					const color = 0x006699;
+					const color = 0x000000;
 
 					const matDark = new THREE.LineBasicMaterial( {
 						color: color,
@@ -49,13 +49,13 @@
 					const matLite = new THREE.MeshBasicMaterial( {
 						color: color,
 						transparent: true,
-						opacity: 0.5,
+						opacity: 0.3,
 						side: THREE.DoubleSide
 					} );
 
-					const message = "Hello Three.js";
+					const message = "Rajkumar S";
 
-					const shapes = font.generateShapes( message, 88 );
+					const shapes = font.generateShapes( message, 100 );
 
 					const geometry = new THREE.ShapeGeometry( shapes );
 
